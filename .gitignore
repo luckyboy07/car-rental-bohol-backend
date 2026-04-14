@@ -24,6 +24,8 @@
 .DS_Store
 *.pem
 .env*
+sqlite.db
+./sqlite.db
 
 # debug
 npm-debug.log*
