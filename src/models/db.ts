@@ -46,11 +46,6 @@ export const initDb = () => {
     );
   `);
 
-  // TEMPORARY - Remove after deployment
-  db.exec('DELETE FROM bookings');
-  db.exec('DELETE FROM cars');
-  console.log('⚠️ Database cleared!');
-  
   // Seed default admin if none exist
   const stmt = db.prepare('SELECT COUNT(*) as count FROM admins WHERE email = ?');
   const result: any = stmt.get('admin@boholrentals.com');
